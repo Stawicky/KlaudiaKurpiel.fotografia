@@ -1,0 +1,38 @@
+body {
+    cursor: none;
+}
+
+::selection {
+    color: white;
+    background: rgb(83, 10, 10);
+  }
+
+.cursor {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: black;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: .05s linear;
+    top: 0;
+    left: 0;
+    pointer-events:none;
+    z-index: 2;
+}
+a:link {
+    cursor: none;
+}
+
+@media screen and (max-width: 900px){
+    body {
+        cursor: default;
+        overflow-y: scroll;
+    }
+    .cursor {
+        display: none;
+    }
+    a:link {
+        cursor: pointer;
+    }
+}
